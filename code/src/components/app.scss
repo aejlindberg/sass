@@ -1,0 +1,123 @@
+$font-stack: "Raleway", sans-serif;
+$primary-color: #002a3a;
+$seconday-color: #fff;
+$tab-color: #003d50;
+$box-background: #e3e3e3;
+
+.header {
+  background-color: #d81939;
+  height: 80px;
+  width: 100%;
+  text-align: right;
+  position: relative;
+  img {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+}
+
+.heroImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 440px;
+  width: 1273px;
+  position: relative;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.tabBox-fly {
+  background-color: $box-background;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  top: -20%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $tab-color;
+  font: 100%$font-stack;
+  font-weight: bold;
+  margin-right: 10px;
+  img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+.tabBox-fly-hotel {
+  @extend.tabBox-fly;
+  background-color: $tab-color;
+  color: #fff;
+  left: 110px;
+  width: 120px;
+}
+
+.tabBox-rental {
+  @extend.tabBox-fly-hotel;
+  left: 240px;
+}
+
+.tabBox-hotel {
+  @extend.tabBox-fly-hotel;
+  left: 370px;
+}
+
+.heroBox {
+  background-color: $box-background;
+  box-shadow: 0 0 30px rgba(0,42,58,.5);
+  height: 250px;
+  width: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+}
+
+.heroBoxInput {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  span {
+    font: 100%$font-stack;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+  input {
+    font: 80%$font-stack;
+    height: 52px;
+    width: 370px;
+    padding-left: 10px;
+  }
+  button {
+    background-color: #d81939;
+    opacity: 0.5;
+    color: #fff;
+    font: 80%$font-stack;
+    font-size: 18px;
+    height: 54px;
+    width: 200px;
+    padding: 17px 50px 11px 16px;
+    text-align: left;
+    position: absolute;
+    bottom: -100px;
+    left: 10px;
+  }
+  .inputSuggestion {
+    position: absolute;
+    left: 13px;
+    bottom: -40px;
+  }
+}
